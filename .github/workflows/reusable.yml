@@ -3,20 +3,20 @@ on:
   workflow_call: 
     inputs:
         who-to-greet:
-          description: "some description to greet people?"
+          description: 'some description to greet people?'
           type: string
           required: true
           default: World
     outputs:
       current-time:
-        description: "the current time of this wrolflow"
+        description: 'the current time of this workflow'
         value: ${{ jobs.reusable-job.outputs.current-time }}
         
 jobs:
   reusable-job:
     runs-on: ubuntu-latest
     steps: 
-      - name: "first step"
+      - name: first step
         run: echo "Hello ${{ inputs.who-to-greet }}"
         
       - name: time step
