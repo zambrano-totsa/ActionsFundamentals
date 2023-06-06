@@ -14,6 +14,6 @@ jobs:
     needs: [calling-workflow]
     steps:
       - name: Print Greet
-        run: echo "Current time ${{ needs.calling-workflow.outputs.current-time }}
+        run: echo "Current time ${{ needs.calling-workflow.outputs.current-time }}"
       
   
